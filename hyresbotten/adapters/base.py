@@ -18,6 +18,13 @@ class Adapter:
     # Small sources can legitimately have nothing out; big ones returning
     # nothing almost certainly broke.
     allow_empty = False
+    # Big responses that rarely matter can be fetched less often. Between
+    # fetches the source keeps the listings it had.
+    every_minutes = 15
+    # A small dict that survives between runs, for an adapter's own
+    # bookkeeping (e.g. ids it already found to be outside the region).
+    # The runner sets it before every fetch.
+    memo = None
 
     def fetch(self, http: Http, previous: Dict[str, dict]) -> List[Listing]:
         """Return every listing the source shows right now.

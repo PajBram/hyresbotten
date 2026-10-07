@@ -37,7 +37,7 @@ class RateLimited(HttpError):
 class Http:
     def __init__(self, min_interval=0.5, timeout=30, retries=2, user_agent=USER_AGENT):
         self.min_interval = min_interval  # seconds between requests to one host
-        self.timeout = timeout
+        self.timeout = timeout  # seconds of silence before a request gives up
         self.retries = retries
         self.user_agent = user_agent
         self.request_count = 0
@@ -46,8 +46,9 @@ class Http:
 
     # -- public ----------------------------------------------------------
 
-    def get_json(self, url, params=None):
-        return json.loads(self.get_text(url, params))
+    def get_json(self, url, params=None, headers=None):
+        # Some servers start their JSON with a byte order mark.
+        return json.loads(self.get_text(url, params, headers).lstrip("\ufeff"))
 
     def post_json(self, url, payload):
         body = json.dumps(payload).encode()
@@ -57,18 +58,19 @@ class Http:
         body = urllib.parse.urlencode(fields).encode()
         return self._request(url, data=body, content_type="application/x-www-form-urlencoded")
 
-    def get_text(self, url, params=None):
+    def get_text(self, url, params=None, headers=None):
         if params:
             url = f"{url}?{urllib.parse.urlencode(params)}"
-        return self._request(url)
+        return self._request(url, extra_headers=headers)
 
     # -- internals -------------------------------------------------------
 
-    def _request(self, url, data=None, content_type=None):
+    def _request(self, url, data=None, content_type=None, extra_headers=None):
         self._check_robots(url)
         headers = {"User-Agent": self.user_agent, "Accept": "application/json, text/html;q=0.9"}
         if content_type:
             headers["Content-Type"] = content_type
+        headers.update(extra_headers or {})
         last_error = None
         for attempt in range(self.retries + 1):
             self._pace(url)

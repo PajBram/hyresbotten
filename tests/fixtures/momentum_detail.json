@@ -1,0 +1,159 @@
+{
+ "id": "VQVyYrtRXGpDh7vqGQj7DCrD",
+ "localId": "3349478",
+ "displayName": "Kokillbacken 7",
+ "type": "residential",
+ "queueType": "residential",
+ "queueTypeDisplayName": "Bostad",
+ "queuePointsCurrentPositionX": 700,
+ "nrApplications": 17,
+ "pricing": {
+  "price": 12525.83
+ },
+ "economy": {},
+ "location": {
+  "area": {
+   "displayName": "Kokillbacken"
+  },
+  "areaPath": [
+   {
+    "id": "GkD7ryX4hwPHyhTC6qMCgtpP",
+    "displayName": "Kungsängen"
+   }
+  ],
+  "address": {
+   "address": "Kokillbacken 7 ",
+   "street": "Kokillbacken",
+   "streetnumber": "7",
+   "postcode": "196 40",
+   "city": "Kungsängen",
+   "country": "Sverige",
+   "completeAdress": "Kokillbacken 7 , 196 40, Kungsängen, Sverige"
+  },
+  "floorDisplayName": "Våning 2",
+  "officialApartmentNumber": "1202"
+ },
+ "availability": {
+  "availableFrom": "/Date(1798758000000)/"
+ },
+ "publishing": {
+  "published": true
+ },
+ "application": {
+  "openTo": "/Date(1792015140000)/"
+ },
+ "size": {
+  "roomsDisplayName": "3 rum och kök",
+  "area": 65.2
+ },
+ "included": [],
+ "attributes": [],
+ "info": {},
+ "files": {
+  "locationImage": [
+   {
+    "displayName": "Interiörbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833885",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Interiörbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833887",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Interiörbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833888",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Interiörbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833889",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Interiörbilder",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/files/",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Interiörbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833891",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Interiörbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833892",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Utsikt",
+    "mimeType": "image/png",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/943284",
+    "linkedToType": "rentalObject"
+   }
+  ],
+  "areaImage": [
+   {
+    "displayName": "Områdesbilder",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/files/",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Områdesbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833838",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Områdesbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833839",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Områdesbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833840",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Områdesbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833841",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Områdesbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833843",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Områdesbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833844",
+    "linkedToType": "building"
+   },
+   {
+    "displayName": "Områdesbilder",
+    "mimeType": "image/jpeg",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/images/833845",
+    "linkedToType": "building"
+   }
+  ],
+  "floorplan": [
+   {
+    "displayName": "Ritning",
+    "mimeType": "application/pdf",
+    "address": "https://upplandsbrohus-fastighet.momentum.se/Prod/UpplandsBrohus/PmApi/v2/market/objects/VQVyYrtRXGpDh7vqGQj7DCrD/files/831155"
+   }
+  ]
+ }
+}

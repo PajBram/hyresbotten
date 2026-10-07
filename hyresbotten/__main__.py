@@ -44,11 +44,25 @@ def write_json(path, data, pretty=False):
     os.replace(tmp, path)
 
 
+def due(status, adapter, now):
+    """True when the adapter's interval has passed since its last success."""
+    if adapter.every_minutes <= 15 or not status.get("ok") or not status.get("last_success"):
+        return True
+    last = dt.datetime.strptime(status["last_success"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
+    # A few minutes of slack: GitHub's schedule drifts.
+    return now - last >= dt.timedelta(minutes=adapter.every_minutes - 5)
+
+
 def run(state, adapters, http, now):
     failed = []
     for adapter in adapters:
         status = state["sources"].setdefault(adapter.name, {})
-        status.update(label=adapter.label, homepage=adapter.homepage, last_run=store.iso(now))
+        status.update(label=adapter.label, homepage=adapter.homepage)
+        if not due(status, adapter, now):
+            log.info("%s: fetched recently, skipping this run", adapter.name)
+            continue
+        status["last_run"] = store.iso(now)
+        adapter.memo = status.setdefault("memo", {})
         before = http.request_count
         try:
             listings = adapter.fetch(http, store.previous_for(state, adapter.name))
@@ -84,7 +98,8 @@ def main(argv=None):
     write_json(os.path.join(args.out, "state.json"), state, pretty=True)
     write_json(os.path.join(args.out, "listings.json"), {
         "generated_at": store.iso(now),
-        "sources": state["sources"],
+        "sources": {name: {k: v for k, v in status.items() if k != "memo"}
+                    for name, status in state["sources"].items()},
         "listings": store.public_listings(state),
     })
 

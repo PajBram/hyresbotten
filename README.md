@@ -34,27 +34,44 @@ GitHub Actions, var 15:e minut            GitHub Pages (repot PajBram/rastegar)
 
 ## Källor
 
-| Källa | Hur | Anrop per körning | Kräver kötid | Sista ansökningsdag |
-|---|---|---|---|---|
-| Bostadsförmedlingen | `GET /AllaAnnonser/`, samma JSON som deras lista använder | 1 | Ja, utom "Bostad snabbt" | Ja |
-| Homeq | `POST api.homeq.se/api/v3/search` (Stockholms län) + detaljer per ny annons | 1–2 + högst 60 detaljer | Ja vid köpoäng, nej vid "först till kvarn"/lottning | Finns inte |
-| Heimstaden | WordPress `admin-ajax.php?action=hose_search`, vanliga + student | 2 | Ja (registreringsdatum är vägledande) | Finns inte |
-| Wallenstam | Formulär-POST till "Lediga bostäder", svarar med JSON | 1 | Ja (egen kö) | Finns inte |
-| Rikshem | RSS-flödet + annonssidan en gång per ny annons | 1 + nya annonser | Ja, om annonsen inte säger "först till kvarn" | Ja |
+25 källor hämtas på fyra sätt. De flesta hyresvärdarna sitter på två gemensamma
+uthyrningssystem (Vitec och Momentum), så en ny värd på något av dem kräver
+bara en rad i [`hyresbotten/adapters/__init__.py`](hyresbotten/adapters/__init__.py).
 
-- **Akelius** är inte med. Bolaget sålde alla sina svenska bostäder till
-  Heimstaden 2021 och har inga annonser i Sverige.
+| Källa | Hur | Kräver kötid | Sista ansökningsdag |
+|---|---|---|---|
+| Bostadsförmedlingen | `GET /AllaAnnonser/`, samma JSON som deras lista använder (1 anrop) | Ja, utom "Bostad snabbt" | Ja |
+| Homeq | `POST api.homeq.se/api/v3/search` (Stockholms län) + detaljer en gång per ny annons, högst 60 per körning | Ja vid köpoäng, nej vid "först till kvarn"/lottning | Finns inte |
+| Heimstaden | WordPress `admin-ajax.php?action=hose_search`, vanliga + student (2 anrop) | Ja | Finns inte |
+| Wallenstam | Formulär-POST till "Lediga bostäder", svarar med JSON (1 anrop) | Ja (egen kö) | Finns inte |
+| Rikshem | RSS-flödet + annonssidan en gång per ny annons | Ja, om annonsen inte säger "först till kvarn" | Ja |
+| **Vitec-portaler:** Telge Bostäder, Victoriahem, Sveafastigheter, Wåhlin, Tyresö Bostadsförmedling, Förvaltaren, Haninge Bostäder, Sollentunahem, Värmdö Bostäder, Ekerö Bostäder | `GET /rentalobject/Listapartment/published` (1 anrop per portal) | Nej vid direktsök/lottning, annars ja | Ja |
+| **Momentum-portaler:** K2A, ByggVesta, John Mattson, Nynäshamnsbostäder, Upplands-Brohus, Järfällahus, Armada, Nykvarnsbostäder | Portalens öppna API, med den publika klientnyckeln som portalen själv delar ut i `/assets/app-settings.json` + detaljer en gång per ny annons | Nej för "Ledig direkt"/"först till kvarn", annars ja | Ja |
+| **FAST2:** SSSB (studentbostäder), SKB (kooperativ) | JSONP-anropet `/widgets/` som deras lista använder (1 anrop) | Ja | SSSB ibland |
+
+- **Victoriahem och Sveafastigheter** svarar med hela landet (9 MB respektive
+  1,6 MB). De hämtas därför bara en gång i timmen respektive varannan
+  kvart. Mellan hämtningarna ligger deras annonser kvar som de var.
+- **K2A och ByggVesta** finns i hela landet, och orten syns bara i detaljen. Annonser
+  som visar sig ligga utanför länet sparas i källans `memo` och slås inte upp igen.
+- **Inte med:**
+  - Akelius sålde alla sina svenska bostäder till Heimstaden 2021.
+  - Sigtuna Bostadsförmedling: datan ligger på ponduspro.se, vars robots.txt
+    förbjuder allt.
+  - Qasa och Blocket Bostad: deras förstahandsannonser är desamma som på Homeq.
+  - Stena, Ikano, Olov Lindgren och Botrygg hyr ut via Homeq eller
+    Bostadsförmedlingen.
+  - Einar Mattsson visar bara annonser efter inloggning.
 - **Rikshem** hyr ut sina lägenheter i Stockholm, Solna och Upplands Väsby via
-  Bostadsförmedlingen, så de kommer redan med den vägen. Det som återstår i länet
-  är främst Södertälje.
+  Bostadsförmedlingen. Det som återstår i länet är främst Södertälje.
 - **robots.txt** läses för varje värd innan första anropet och tolkas enligt
   RFC 9309, där den längsta matchande regeln vinner.
 - **User-Agent:** `Hyresbotten/1.0 (+https://rastegar.se/hyra; …)`.
 - **Takt:** minst 0,5 s mellan anrop till samma värd och extra paus mellan
-  Homeqs detaljanrop. Om Homeq svarar 429 hämtas resten av detaljerna nästa körning.
-- **Första körningen** hämtar Homeq-detaljerna för cirka 1 000 annonser i omgångar
-  om 60. Det tar några timmar innan alla har våning och kökrav. Fram till dess
-  står det "Våning hämtas" respektive "Kökrav hämtas" på sidan.
+  detaljanrop. Svarar en källa 429 hämtas resten av detaljerna nästa körning.
+- **Första körningen** hämtar detaljerna i omgångar. Det tar några timmar innan
+  alla Homeq- och K2A-annonser är kompletta. Fram till dess står det "Våning hämtas"
+  eller "Kökrav hämtas" på sidan.
 
 ## Datamodell
 
@@ -147,6 +164,9 @@ Det här gör du en gång. Allt sker i GitHub, och inget behöver göras hos Loo
    att testa.
 2. Använd `http.get_json` / `get_text` / `post_json` / `post_form`. De sköter
    User-Agent, robots.txt, takt och omförsök.
+   Ligger värden på Vitec eller Momentum räcker det med en rad i
+   `adapters/__init__.py`, till exempel
+   `Vitec("namn", "Etikett", "https://minasidor.exempel.se", municipality="Kommun")`.
 3. Behöver källan ett detaljanrop per annons, låna det du redan vet från
    `previous` (se Homeq och Rikshem) och sätt ett tak per körning.
 4. Ange bara postort? Översätt med `places.municipality_for()` och släng

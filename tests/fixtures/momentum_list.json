@@ -1,0 +1,75 @@
+{
+ "count": 2,
+ "items": [
+  {
+   "id": "VQVyYrtRXGpDh7vqGQj7DCrD",
+   "localId": "3349478",
+   "displayName": "Kokillbacken 7",
+   "description": "(utelämnad i testdata)",
+   "type": "residential",
+   "queueType": "residential",
+   "pricing": {
+    "price": 12525.83
+   },
+   "location": {
+    "area": {
+     "displayName": "Kokillbacken"
+    },
+    "areaPath": [
+     {
+      "id": "GkD7ryX4hwPHyhTC6qMCgtpP",
+      "displayName": "Kungsängen"
+     }
+    ]
+   },
+   "availability": {
+    "availableFrom": "/Date(1798758000000)/"
+   },
+   "size": {
+    "roomsDisplayName": "3 rum och kök",
+    "shortRoomsDisplayName": "3ROK",
+    "area": 65.2
+   },
+   "thumbnail": {
+    "exists": true,
+    "displayName": "Interiörbilder",
+    "version": "f-833885"
+   }
+  },
+  {
+   "id": "6P7vq8hjwdP4QkwbgytddctX",
+   "localId": "3349216",
+   "displayName": "Fasanstigen 44",
+   "description": "(utelämnad i testdata)",
+   "type": "residential",
+   "queueType": "residential",
+   "pricing": {
+    "price": 12528.0
+   },
+   "location": {
+    "area": {
+     "displayName": "Fasanstigen"
+    },
+    "areaPath": [
+     {
+      "id": "kgmpKBdBJFXhWwfVRy8R66dY",
+      "displayName": "Bro"
+     }
+    ]
+   },
+   "availability": {
+    "availableFrom": "/Date(1801436400000)/"
+   },
+   "size": {
+    "roomsDisplayName": "4 rum och kök",
+    "shortRoomsDisplayName": "4ROK",
+    "area": 93.3
+   },
+   "thumbnail": {
+    "exists": true,
+    "displayName": "Exempel Badrum",
+    "version": "f-939716"
+   }
+  }
+ ]
+}
