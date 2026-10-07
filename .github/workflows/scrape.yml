@@ -1,0 +1,67 @@
+# Scrapes every source about every 15 minutes and publishes the result to the
+# "data" branch, which rastegar.se/hyra/ reads. The branch is rewritten as a
+# single commit each run, so it never grows a history.
+name: Scrape
+
+on:
+  schedule:
+    # GitHub may start scheduled runs late or skip them under load; that's fine.
+    # Off the hour on purpose: :00 is when GitHub's queue is busiest.
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -t .
+
+      - name: Fetch previous state
+        run: |
+          mkdir -p out
+          if git fetch --depth=1 origin data; then
+            git show origin/data:state.json > out/state.json
+          else
+            echo "No data branch yet, starting fresh."
+          fi
+
+      - name: Scrape
+        id: scrape
+        # A failing source makes this step exit 1, but its listings are kept
+        # and the other sources still publish; the last step reports it.
+        continue-on-error: true
+        run: python -m hyresbotten --state out/state.json --out out
+
+      - name: Publish to the data branch
+        if: hashFiles('out/listings.json') != ''
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd out
+          git init -q -b data
+          git config user.name "hyresbotten[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add listings.json state.json
+          git commit -q -m "Data $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q --force "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
+
+      - name: Report failed sources
+        if: steps.scrape.outcome == 'failure'
+        run: |
+          echo "::error::Sources that failed this run: ${{ steps.scrape.outputs.failed || 'see the Scrape step log' }}"
+          exit 1

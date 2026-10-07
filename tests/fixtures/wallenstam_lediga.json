@@ -1,0 +1,133 @@
+{
+ "Filters": [],
+ "Objects": [
+  {
+   "Description": null,
+   "ShowDescription": false,
+   "Status": "Under försäljning",
+   "Type": null,
+   "CreationDate": "/Date(1712223404000)/",
+   "Coordinates": "59.30144423931,18.0296709131267",
+   "Tag": "Nyproduktion",
+   "Id": "53508",
+   "Headline": "Vida Årstaberg",
+   "Area": "Årstaberg",
+   "City": "Stockholm",
+   "ImageUrl": "/imagevault/publishedmedia/wixmw1vd0g5630dlm21q/Innerg-rd_JPG_WALLENSTAM_Arstaberg_Innergard_Soul_.jpg",
+   "Url": "/sv/stadsutveckling/Nyproduktion/bostad/vida-arstaberg/",
+   "LargePromotion": false,
+   "Attributes": [
+    "Bostadsrätt"
+   ],
+   "PageType": "ProjectPageModel",
+   "SortOrder": 0,
+   "Rentable": true
+  },
+  {
+   "Description": null,
+   "ShowDescription": false,
+   "Status": "Under uthyrning",
+   "Type": null,
+   "CreationDate": "/Date(1712223404000)/",
+   "Coordinates": "59.30144423931,18.0296709131267",
+   "Tag": "Nyproduktion",
+   "Id": "47877",
+   "Headline": "Årstaberg",
+   "Area": "Årstaberg",
+   "City": "Stockholm",
+   "ImageUrl": "/imagevault/publishedmedia/wixmw1vd0g5630dlm21q/Innerg-rd_JPG_WALLENSTAM_Arstaberg_Innergard_Soul_.jpg",
+   "Url": "/sv/stadsutveckling/Nyproduktion/bostad/arstaberg/",
+   "LargePromotion": false,
+   "Attributes": [
+    "Hyresrätt"
+   ],
+   "PageType": "ProjectPageModel",
+   "SortOrder": 0,
+   "Rentable": true
+  },
+  {
+   "MoveInDate": "Inflytt 2027-01-01",
+   "ShowMoveInDate": true,
+   "Type": null,
+   "CreationDate": "/Date(-62135596800000)/",
+   "NumberOfRoomsText": "1 Rok",
+   "RentText": "7195 kr/mån",
+   "Rent": "7195",
+   "Status": null,
+   "Coordinates": "57.65834,12.11534",
+   "IsQuickMoveIn": false,
+   "QuickMoveInText": "Snabb inflytt",
+   "Id": "54167",
+   "Headline": "Biblioteksgatan 9",
+   "Area": "Mölnlycke",
+   "City": "Göteborg",
+   "ImageUrl": "/imagevault/publishedmedia/3h6csuh5rymomrtb2h79/DY3A1263.jpg",
+   "Url": "/sv/bostader/lediga-bostader/goteborg/3864-0233-biblioteksgatan-9/",
+   "LargePromotion": false,
+   "Attributes": [
+    "1 rok",
+    "40 m²",
+    "3:e våningen"
+   ],
+   "PageType": "BostadPageModel",
+   "SortOrder": 0,
+   "Rentable": true
+  },
+  {
+   "MoveInDate": "Inflytt 2027-01-01",
+   "ShowMoveInDate": true,
+   "Type": null,
+   "CreationDate": "/Date(-62135596800000)/",
+   "NumberOfRoomsText": "1 Rok",
+   "RentText": "7313 kr/mån",
+   "Rent": "7313",
+   "Status": null,
+   "Coordinates": "57.6614,12.12671",
+   "IsQuickMoveIn": false,
+   "QuickMoveInText": "Snabb inflytt",
+   "Id": "54217",
+   "Headline": "Bruksgatan 3",
+   "Area": "Mölnlycke",
+   "City": "Göteborg",
+   "ImageUrl": "/imagevault/publishedmedia/lfstiofao2zyww01o47d/Fastighetsbild_-versikt.jpg",
+   "Url": "/sv/bostader/lediga-bostader/goteborg/3854-0033-bruksgatan-3/",
+   "LargePromotion": false,
+   "Attributes": [
+    "1 rok",
+    "35 m²",
+    "2:a våningen"
+   ],
+   "PageType": "BostadPageModel",
+   "SortOrder": 0,
+   "Rentable": true
+  },
+  {
+   "MoveInDate": "Inflytt 2027-01-01",
+   "ShowMoveInDate": true,
+   "Type": null,
+   "CreationDate": "/Date(-62135596800000)/",
+   "NumberOfRoomsText": "2 Rok",
+   "RentText": "9184 kr/mån",
+   "Rent": "9184",
+   "Status": null,
+   "Coordinates": "57.66204,12.12793",
+   "IsQuickMoveIn": false,
+   "QuickMoveInText": "Snabb inflytt",
+   "Id": "54225",
+   "Headline": "Disponentvägen 4",
+   "Area": "Mölnlycke",
+   "City": "Göteborg",
+   "ImageUrl": "/imagevault/publishedmedia/bwjb4baycfyhvp8r8szv/1_Exteri-r_huskroppar.jpg",
+   "Url": "/sv/bostader/lediga-bostader/goteborg/3850-2206-disponentvagen-4/",
+   "LargePromotion": false,
+   "Attributes": [
+    "2 rok",
+    "50 m²",
+    "2:a våningen"
+   ],
+   "PageType": "BostadPageModel",
+   "SortOrder": 0,
+   "Rentable": true
+  }
+ ]
+}

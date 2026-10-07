@@ -1,0 +1,91 @@
+{
+ "id": 1022,
+ "name": "Orminge Torg Bostad",
+ "published": true,
+ "closed": false,
+ "publish_date": "2024-10-18",
+ "republish_date": "2026-10-05T07:03:39.191818+00:00",
+ "close_date": null,
+ "status": "Published",
+ "info_header": "Orminge Torg Bostad",
+ "area_info_header": "Orminge- Det bästa av två världar",
+ "info_description": "(utelämnad i testdata)",
+ "area_info_description": "(utelämnad i testdata)",
+ "apartment_count": 199,
+ "preliminary_move_in_date": "2026-11-01",
+ "is_short_lease": false,
+ "show_timeline_module": true,
+ "show_freetext_module": true,
+ "show_area_info_module": true,
+ "show_area_media_module": false,
+ "show_email_collection_module": true,
+ "range_information": {
+  "rent": [
+   8361,
+   24191
+  ],
+  "rooms": [
+   "1.0",
+   "5.0"
+  ],
+  "area": [
+   "2.00",
+   "102.00"
+  ],
+  "floor": [
+   1,
+   16
+  ],
+  "has_discount": false
+ },
+ "logo": "https://homeq-media-live.s3.eu-north-1.amazonaws.com/landlord_offices/logos/a98895d2828242219712a99ccbfce29a.jpg",
+ "public_profile_slug": null,
+ "candidate_sorting_mode": "first_come_first",
+ "contract_system": "B",
+ "office": {
+  "id": 2092,
+  "name": "Elisby Orminge Torg Bostad HQ"
+ },
+ "landlord": {
+  "id": 1273,
+  "name": "Elisby Orminge Torg Bostad AB"
+ },
+ "landlord_queue_id": null,
+ "freetext_entries": [],
+ "project_location": {
+  "latitude": "59.3271910",
+  "longitude": "18.2582640",
+  "street": "Skomakartrappan",
+  "street_number": "3",
+  "zip_code": "13230",
+  "city": "Saltsjö-boo"
+ },
+ "timeline_entries": [
+  {
+   "id": 1162,
+   "title": "Start uthyrning",
+   "description": "Etapp 1",
+   "date": "2024-12-01"
+  },
+  {
+   "id": 1163,
+   "title": "Inflytt",
+   "description": "Etapp 1",
+   "date": "2025-04-18"
+  },
+  {
+   "id": 1167,
+   "title": "Preliminär Start uthyrning",
+   "description": "Etapp 2",
+   "date": "2026-03-30"
+  },
+  {
+   "id": 1168,
+   "title": "Preliminär Inflytt",
+   "description": "Inflyttning sker i etapper",
+   "date": "2026-10-01"
+  }
+ ],
+ "unsubscribe_id": null,
+ "campaign_id": null
+}

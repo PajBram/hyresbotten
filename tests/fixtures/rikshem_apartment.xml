@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lediga lägenheter</title>
+    <link>http://www.rikshem.se</link>
+    <description>Lediga objekt</description>
+    <generator>Vitec Portal</generator>
+    <language>sv</language>
+    <atom:link href="https://minasidor.rikshem.se/RSS/apartment.aspx" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Myrstigen 18</title>
+      <link>https://minasidor.rikshem.se/ledigt/detalj/id/6901-13916</link>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">9d826d50-ea73-4f45-b71c-133bb77bfff8</guid>
+      <description>1:a, 38 kvm, hyra: 7709 kr. Myrstigen 18, 151 60 Södertälje</description>
+      <category>Blombacka</category>
+    </item>
+<item>
+      <title>Brolundavägen 32</title>
+      <link>https://minasidor.rikshem.se/ledigt/detalj/id/6901-321103</link>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">11e719b6-9e73-408c-a7ca-7301603d3c9b</guid>
+      <description>1:a, 34 kvm, hyra: 6329 kr. Brolundavägen 32, 151 60 Södertälje</description>
+      <category>Blombacka</category>
+    </item>
+<item>
+      <title>Brolundavägen 37</title>
+      <link>https://minasidor.rikshem.se/ledigt/detalj/id/6901-371101</link>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">d24b704a-d4bc-4765-8824-c98694e58fec</guid>
+      <description>1:a, 33 kvm, hyra: 8077 kr. Brolundavägen 37, 151 60 Södertälje</description>
+      <category>Blombacka</category>
+    </item>
+<item>
+      <title>Rådhusgatan 87 A</title>
+      <link>https://minasidor.rikshem.se/ledigt/detalj/id/2553-8012</link>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">d17f8151-4234-4bbd-8d5c-16975faea800</guid>
+      <description>2:a, 59 kvm, hyra: 6270 kr. Rådhusgatan 87 A, 831 44 Östersund</description>
+      <category>Odenslund</category>
+    </item>
+<item>
+      <title>Rådhusgatan 89 A</title>
+      <link>https://minasidor.rikshem.se/ledigt/detalj/id/2553-8042</link>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">5c5e1447-966e-436b-b97e-ebf441df9f66</guid>
+      <description>1:a, 32 kvm, hyra: 6120 kr. Rådhusgatan 89 A, 831 44 Östersund</description>
+      <category>Odenslund</category>
+    </item>
+  </channel>
+</rss>

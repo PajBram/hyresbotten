@@ -1,0 +1,274 @@
+{
+ "results": [
+  {
+   "id": 285632,
+   "references": {
+    "object_ad": 285632,
+    "estate": 8506,
+    "project": null,
+    "company": 329,
+    "office": 448,
+    "apartment": 192255
+   },
+   "type": "individual",
+   "uri": "/lagenhet/285632-3rum-stockholm-stockholms-län-segersällsvägen-19",
+   "municipality": "Järfälla",
+   "county": "Stockholms län",
+   "city": "Stockholm",
+   "location": {
+    "lon": 17.8527915,
+    "lat": 59.4152646
+   },
+   "images": [
+    {
+     "image": "https://homeq-media-live.s3.amazonaws.com/apartment_images/32bcfcfb26034a5683bc884e9bcfd09e.jpeg",
+     "caption": "",
+     "position": 0
+    }
+   ],
+   "videos": [],
+   "boost_value": 10.0,
+   "discount": null,
+   "title": "Segersällsvägen 19",
+   "audience": "everyone",
+   "is_short_lease": false,
+   "early_access": null,
+   "rent": 16614,
+   "rooms": 3.0,
+   "area": 80.0,
+   "date_access": "2026-12-01",
+   "is_quick_apply": true
+  },
+  {
+   "id": 1022,
+   "references": {
+    "project": 1022,
+    "company": 1273,
+    "office": 2092
+   },
+   "type": "project",
+   "uri": "/projekt/1022",
+   "municipality": "Nacka",
+   "county": "Stockholms län",
+   "city": "Saltsjö-boo",
+   "location": {
+    "lon": 18.258264,
+    "lat": 59.327191
+   },
+   "images": [
+    {
+     "image": "https://homeq-media-live.s3.amazonaws.com/project_images/2c5cc1302db14ee9a967dd5cbb2cc9ee.jpeg",
+     "caption": "",
+     "position": 0
+    }
+   ],
+   "videos": [],
+   "boost_value": 13.78,
+   "discount": null,
+   "title": "Orminge Torg Bostad",
+   "audience": [
+    "everyone"
+   ],
+   "is_short_lease": false,
+   "has_discount": false,
+   "rent_range": [
+    9680,
+    20964
+   ],
+   "active_ads": 90,
+   "date_access": "2026-11-18"
+  },
+  {
+   "id": 285424,
+   "references": {
+    "object_ad": 285424,
+    "estate": 7343,
+    "project": null,
+    "company": 986,
+    "office": 1695,
+    "apartment": 236958
+   },
+   "type": "individual",
+   "uri": "/lagenhet/285424-1rum-enskede-stockholms-län-knektvägen-8",
+   "municipality": "Stockholm",
+   "county": "Stockholms län",
+   "city": "Enskede",
+   "location": {
+    "lon": 18.0803342,
+    "lat": 59.2622014
+   },
+   "images": [
+    {
+     "image": "https://homeq-media-live.s3.amazonaws.com/apartment_images/21fa065b808b4d92bbf0184932754504.jpeg",
+     "caption": "",
+     "position": 0
+    }
+   ],
+   "videos": [],
+   "boost_value": 10.0,
+   "discount": null,
+   "title": "Knektvägen 8",
+   "audience": "student",
+   "is_short_lease": false,
+   "early_access": null,
+   "rent": 7997,
+   "rooms": 1.0,
+   "area": 24.0,
+   "date_access": "2027-01-01",
+   "is_quick_apply": false
+  },
+  {
+   "id": 285352,
+   "references": {
+    "object_ad": 285352,
+    "estate": 3942,
+    "project": null,
+    "company": 616,
+    "office": 935,
+    "apartment": 206461
+   },
+   "type": "individual",
+   "uri": "/lagenhet/285352-2rum-tullinge-stockholms-län-solskensvägen-21",
+   "municipality": "Botkyrka",
+   "county": "Stockholms län",
+   "city": "Tullinge",
+   "location": {
+    "lon": 17.9085976,
+    "lat": 59.2106179
+   },
+   "images": [
+    {
+     "image": "https://homeq-media-live.s3.amazonaws.com/apartment_images/260a9c080cec45cea04701ce5331585b.jpeg",
+     "caption": "",
+     "position": 0
+    }
+   ],
+   "videos": [],
+   "boost_value": 10.0,
+   "discount": null,
+   "title": "Solskensvägen 21",
+   "audience": "youth",
+   "is_short_lease": false,
+   "early_access": null,
+   "rent": 8391,
+   "rooms": 2.0,
+   "area": 34.5,
+   "date_access": "2026-11-01",
+   "is_quick_apply": true
+  },
+  {
+   "id": 285213,
+   "references": {
+    "object_ad": 285213,
+    "estate": 4795,
+    "project": null,
+    "company": 807,
+    "office": 1500,
+    "apartment": 185078
+   },
+   "type": "individual",
+   "uri": "/lagenhet/285213-2rum-stockholm-stockholms-län-norrtullsgatan-5",
+   "municipality": "Stockholm",
+   "county": "Stockholms län",
+   "city": "Stockholm",
+   "location": {
+    "lon": 18.0520854,
+    "lat": 59.3414429
+   },
+   "images": [],
+   "videos": [],
+   "boost_value": 0.68,
+   "discount": null,
+   "title": "Norrtullsgatan 5",
+   "audience": "everyone",
+   "is_short_lease": true,
+   "early_access": null,
+   "rent": 7392,
+   "rooms": 2.0,
+   "area": 57.0,
+   "date_access": "2026-11-01",
+   "is_quick_apply": false
+  },
+  {
+   "id": 1205,
+   "references": {
+    "project": 1205,
+    "company": 1132,
+    "office": 1849
+   },
+   "type": "project",
+   "uri": "/projekt/1205",
+   "municipality": "Sollentuna",
+   "county": "Stockholms län",
+   "city": "Sollentuna",
+   "location": {
+    "lon": 17.966365,
+    "lat": 59.454427
+   },
+   "images": [
+    {
+     "image": "https://homeq-media-live.s3.amazonaws.com/project_images/b1a99925341a4871ab081d26cb4a93fc.jpeg",
+     "caption": "",
+     "position": 0
+    }
+   ],
+   "videos": [],
+   "boost_value": 13.91,
+   "discount": null,
+   "title": "Väsjö Port",
+   "audience": [
+    "youth",
+    "everyone"
+   ],
+   "is_short_lease": false,
+   "has_discount": false,
+   "rent_range": [
+    9530,
+    20549
+   ],
+   "active_ads": 12,
+   "date_access": "1970-01-01"
+  },
+  {
+   "id": 285488,
+   "references": {
+    "object_ad": 285488,
+    "estate": 3185,
+    "project": null,
+    "company": 59,
+    "office": 838,
+    "apartment": 69377
+   },
+   "type": "individual",
+   "uri": "/lagenhet/285488-2rum-bandhagen-stockholms-län-stålbogavägen-18",
+   "municipality": "Stockholm",
+   "county": "Stockholms län",
+   "city": "Bandhagen",
+   "location": {
+    "lon": 18.0501108,
+    "lat": 59.2637168
+   },
+   "images": [
+    {
+     "image": "https://homeq-media-live.s3.amazonaws.com/estate_images/d12f52ade2d34f089b3e5d8462f6730e.jpeg",
+     "caption": "",
+     "position": 0
+    }
+   ],
+   "videos": [],
+   "boost_value": 0.83,
+   "discount": null,
+   "title": "Stålbogavägen 18",
+   "audience": "everyone",
+   "is_short_lease": false,
+   "early_access": null,
+   "rent": 8846,
+   "rooms": 2.0,
+   "area": 57.0,
+   "date_access": "2027-01-01",
+   "is_quick_apply": false
+  }
+ ],
+ "total_hits": 7,
+ "total_listings": 7
+}
