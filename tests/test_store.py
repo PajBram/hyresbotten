@@ -39,6 +39,14 @@ class MergeTest(unittest.TestCase):
         self.assertTrue(rows["2"]["undated"])
         self.assertNotIn("boot", rows["1"])
 
+    def test_stockholm_listings_get_a_district(self):
+        state = store.empty_state()
+        store.merge(state, "a", [listing("1", municipality="Stockholm", area="Midsommarkransen"),
+                                 listing("2", municipality="Solna", area="Hagalund")], T0)
+        rows = {row["external_id"]: row for row in store.public_listings(state)}
+        self.assertEqual(rows["1"]["district"], "Hägersten-Älvsjö")
+        self.assertNotIn("district", rows["2"])
+
     def test_later_listings_keep_their_discovery_time(self):
         state = store.empty_state()
         store.merge(state, "a", [listing("1")], T0)

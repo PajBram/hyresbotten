@@ -171,6 +171,16 @@ class PlacesTest(unittest.TestCase):
         self.assertEqual(municipality_for("Solna"), "Solna")
         self.assertIsNone(municipality_for("Östersund"))
 
+    def test_stockholm_districts(self):
+        from hyresbotten.places import stockholm_district
+        self.assertEqual(stockholm_district("Hägersten"), "Hägersten-Älvsjö")
+        self.assertEqual(stockholm_district("Midsommarkransen"), "Hägersten-Älvsjö")
+        self.assertEqual(stockholm_district("HållBo Kista Äng 2"), "Rinkeby-Kista")
+        self.assertEqual(stockholm_district("Hässelby gård"), "Hässelby-Vällingby")
+        self.assertEqual(stockholm_district("FARSTA STRAND"), "Farsta")
+        self.assertIsNone(stockholm_district("Kistagången"))  # no partial-word matches
+        self.assertIsNone(stockholm_district(None))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -18,7 +18,7 @@ from .base import Adapter
 
 WIDGET = "objektlistabilder@lagenheter"
 # Areas places.py can't know because they are names of buildings or blocks.
-AREA_MUNICIPALITY = {"Kungshamra": "Solna", "Flemingsberg": "Huddinge"}
+AREA_MUNICIPALITY = {"Kungshamra": "Solna", "Pax": "Solna", "Strix": "Solna", "Flemingsberg": "Huddinge"}
 
 
 def widget_url(base):

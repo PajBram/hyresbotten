@@ -9,6 +9,8 @@ The state is one JSON document:
 
 import datetime as dt
 
+from .places import stockholm_district
+
 VERSION = 1
 KEEP_GONE_DAYS = 30
 # A source that suddenly returns far fewer ads has most likely changed its
@@ -89,6 +91,10 @@ def public_listings(state):
     rows = []
     for record in active(state):
         row = {k: v for k, v in record.items() if k not in ("last_seen", "boot", "gone_at")}
+        if record.get("municipality") == "Stockholm":
+            district = stockholm_district(record.get("area"))
+            if district:
+                row["district"] = district
         if record.get("boot") and not record.get("published"):
             # Found in the first import and still without a publish date:
             # its first_seen says nothing about how new the ad is.
